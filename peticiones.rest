@@ -6,8 +6,22 @@ GET http://localhost:3000/clientes/new
 
 ###
 
-POST  http://localhost:3000/clientes/create
+POST  http://localhost:3000/api/users/create
+Content-Type: application/json
+
+{
+    "nombre": "Juan Antonio",
+    "username": "Juanan",
+    "password": "1345",
+    "email": "jj@gmail.com"
+}
 
 ###
+POST http://localhost:3000/api/users/login
+Content-Type: application/jsonrs
 
-GET http://localhost:3000/api
+
+{
+    "email": "jj@gmail.com",
+    "password": "1345"
+}
