@@ -10,8 +10,8 @@ const create = ({ nombre, username, password, email }) => {
 const getById = (usuarioId) => {
     return executeQueryOne('SELECT * FROM usuario WHERE id = ?', [usuarioId]);
 }
-const getByEmail = (usuarioId) => {
-    return executeQueryOne('SELECT * FROM usuario WHERE id = ?', [usuarioId]);
+const getByEmail = (email) => {
+    return executeQueryOne('SELECT * FROM usuario WHERE email = ?', [email]);
 }
 const deleteById = (usuarioId) => {
     return executeQuery('delete from usuario where id = ?', [usuarioId]);

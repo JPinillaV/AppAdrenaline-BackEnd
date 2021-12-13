@@ -8,8 +8,10 @@ const { create, getById, getByEmail } = require('../../models/cliente.model');
 
 
 router.post('/create', (req, res) => {
-    console.log( req.body);
-    create(req.body)
+    
+    const user = req.body;
+    user.password = bcrypt.hashSync(req.body.password);
+    create(user)
         .then(async result => {
             // result.insertId -> ID del nuevo cliente
             const resultById = await getById(result.insertId);
@@ -21,11 +23,13 @@ router.post('/create', (req, res) => {
 });
 router.post('/login', async (req, res) => {
     // 1 - ¿Existe el email en la base de datos?
+    console.log(req.body);
     const usuario = await getByEmail(req.body.email);
     if (!usuario) {
         return res.json({ error: 'Error email y/o password 1' });
     }
     // 2 - Compruebo si coinciden las password
+   
     const iguales = bcrypt.compareSync(req.body.password, usuario.password);
     if (iguales) {
         res.json({ token: createToken(usuario) });

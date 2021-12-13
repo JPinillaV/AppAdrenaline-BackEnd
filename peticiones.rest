@@ -10,18 +10,57 @@ POST  http://localhost:3000/api/users/create
 Content-Type: application/json
 
 {
-    "nombre": "Juan Antonio",
-    "username": "Juanan",
+    "nombre": "Jorge",
+    "username": "Jorgito",
     "password": "1345",
     "email": "jj@gmail.com"
 }
 
 ###
 POST http://localhost:3000/api/users/login
-Content-Type: application/jsonrs
+Content-Type: application/json
 
 
 {
     "email": "jj@gmail.com",
     "password": "1345"
 }
+
+###
+
+GET http://localhost:3000/api/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+###
+
+post http://localhost:3000/api/posts/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "date":"2021-06-05",
+    "idTypePost":1,
+    "text":"hola que tal ",
+    "usuario_id":1
+}
+
+###
+GET http://localhost:3000/api/posts/id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "id": 2 
+}
+###
+DELETE http://localhost:3000/api/posts/id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "id": 1
+}
+
+
+
+
