@@ -1,0 +1,13 @@
+GET http://localhost:3000/clientes
+
+###
+
+GET http://localhost:3000/clientes/new  
+
+###
+
+POST  http://localhost:3000/clientes/create
+
+###
+
+GET http://localhost:3000/api
