@@ -1,6 +1,8 @@
 
 const dayjs = require('dayjs');
 const jwt = require('jsonwebtoken');
+const multer = require('multer');
+
 const executeQuery = (query, data = []) => {
     return new Promise((resolve, reject) => {
         db.query(query, data, (err, result) => {

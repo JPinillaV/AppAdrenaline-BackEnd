@@ -1,11 +1,34 @@
-GET http://localhost:3000/clientes
+GET http://localhost:3000/api/clientes
 
 ###
 
-GET http://localhost:3000/clientes/new  
-
+GET http://localhost:3000/api/clientes  
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
 ###
 
+
+GET http://localhost:3000/api/clientes/profile  
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+###
+
+
+post http://localhost:3000/api/clientes/update  
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "nombre": "Jorge",
+    "username": "Jorgito",
+    "email": "jj@gmail.com",
+    "photo": "https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1552473155/content-items/002/854/613/IMG_2802-original.jpg?1552473155",
+    "textProfile": "esto funciona"
+}
+
+
+###
+// comienzo de las peticiones Users
 POST  http://localhost:3000/api/users/create
 Content-Type: application/json
 
@@ -25,9 +48,9 @@ Content-Type: application/json
     "email": "jj@gmail.com",
     "password": "1345"
 }
-
+// final de las peticiones users
 ###
-
+// comienzo de las peticiones POST
 GET http://localhost:3000/api/posts
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
 
@@ -60,7 +83,51 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGly
 {
     "id": 1
 }
+// final de las peticiones post
 
+// comienzo de las peticiones Likes
+
+###
+GET  http://localhost:3000/api/likes
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+
+###
+
+POST http://localhost:3000/api/likes/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "idlike": 7,
+    "idPost": 7,
+    "date":"2019-06-06",
+    "usuario_id": 7
+}
+
+###
+
+GET  http://localhost:3000/api/likes/id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "idlike": 7
+   
+}
+
+###
+
+DELETE  http://localhost:3000/api/likes/id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+
+{
+    "idlike": 6
+    
+}
+// final de las peticiones likes
 
 
 
