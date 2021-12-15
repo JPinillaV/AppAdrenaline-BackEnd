@@ -26,6 +26,7 @@ router.get('/profile', async (req, res) => {
     }
 })
 router.post('/update', upload.single('photo'), async (req, res) => {
+    
     const extension = '.' + req.file.mimetype.split('/')[1];
     const newName = req.file.filename + extension;
     const path = req.file.path + extension;

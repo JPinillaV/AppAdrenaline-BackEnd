@@ -19,10 +19,11 @@ const deleteById = (usuarioId) => {
 
 
 
-const update = (usuarioId, { nombre, username, email, photo,textProfile }) => {
-    return executeQuery(
-        'UPDATE usuario SET nombre = ?, username = ?, email = ?,photo = ?,textProfile = ? WHERE id = ?',
-        [nombre, username, email,photo, textProfile, usuarioId]);
+const update = (usuarioId, { nombre, username, email, photo }) => {
+    
+    return executeQuery (
+        'UPDATE usuario SET nombre = ?, username = ?, email = ?, photo = ? WHERE id = ?',
+        [nombre, username, email,photo, usuarioId]);
 }
 
 module.exports = { create, getAll,update,getById,deleteById,getByEmail };
