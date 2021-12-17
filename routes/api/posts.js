@@ -15,8 +15,8 @@ router.post('/create', async (req, res) => {
     const post = await create(req.body);
     res.json(post);
 });
-router.get('/id', async (req, res) => {
-    const post = await getById(req.body.id);
+router.get('/:id', async (req, res) => {
+    const post = await getById(req.params.id);
     res.json(post);
 });
 router.delete('/id', async (req, res) => {
