@@ -2,7 +2,7 @@ const router = require('express').Router()
 
 
 
-const {  create, getAll, getById, deleteById } = require('../../models/post.model');
+const {  create, getAll, getById, deleteById, getByUserId } = require('../../models/post.model');
 
 
 router.get('/', async (req, res) => {
@@ -19,7 +19,13 @@ router.get('/:id', async (req, res) => {
     const post = await getById(req.params.id);
     res.json(post);
 });
-router.delete('/id', async (req, res) => {
+router.get('/user/:id', async (req, res) => {
+    console.log(req.params.id);
+    const post = await getByUserId(req.params.id);
+    res.json(post);
+});
+
+router.delete('/:id', async (req, res) => {
     const post = await deleteById(req.body.id);
     res.json(post)
 })

@@ -69,7 +69,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGly
 }
 
 ###
-GET http://localhost:3000/api/posts/3
+GET http://localhost:3000/api/posts/user/3
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
 
