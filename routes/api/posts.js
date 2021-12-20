@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     res.json(post);
 });
 
-router.post('/create', async (req, res) => {
+router.post('/create/:id', async (req, res) => {
    
     const post = await create(req.body);
     res.json(post);

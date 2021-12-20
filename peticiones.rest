@@ -4,19 +4,19 @@ GET http://localhost:3000/api/clientes
 
 GET http://localhost:3000/api/clientes  
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 ###
 
 
 GET http://localhost:3000/api/clientes/profile  
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 ###
 
 
 post http://localhost:3000/api/clientes/update  
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "nombre": "Jorge",
@@ -52,32 +52,32 @@ Content-Type: application/json
 ###
 // comienzo de las peticiones POST
 GET http://localhost:3000/api/posts
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 
 ###
 
 post http://localhost:3000/api/posts/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "date":"2021-06-05",
     "idTypePost":1,
-    "text":"hola que tal ",
-    "usuario_id":1
+    "photoPost":"https://images.unsplash.com/photo-1639669047277-32640a26bdf6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    "usuario_id":12
 }
 
 ###
 GET http://localhost:3000/api/posts/user/3
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 
 ###
 DELETE http://localhost:3000/api/posts/id
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "id": 1
@@ -89,14 +89,14 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGly
 ###
 GET  http://localhost:3000/api/likes
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 
 ###
 
 POST http://localhost:3000/api/likes/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "idlike": 7,
@@ -109,7 +109,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGly
 
 GET  http://localhost:3000/api/likes/id
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "idlike": 7
@@ -120,7 +120,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGly
 
 DELETE  http://localhost:3000/api/likes/id
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEsImV4cGlyZWRBdCI6MTYzOTgzODY2NSwiaWF0IjoxNjM5NDA2NjY1fQ.MBj116j-DHnZ7WlfKkR3HGz6_hwgfEe9yeatdlyM3nI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjgsImV4cGlyZWRBdCI6MTY0MDQyNTc4MywiaWF0IjoxNjM5OTkzNzgzfQ.JQtkJvUrLJ9eWUGKARliwl497hCni4sVCF6dNgcc9Bw
 
 {
     "idlike": 6
