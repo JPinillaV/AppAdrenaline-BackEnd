@@ -1,4 +1,7 @@
 const router = require('express').Router()
+const fs = require('fs');
+const multer = require('multer');
+const upload = multer({dest:'public/images'})
 
 
 
@@ -10,9 +13,15 @@ router.get('/', async (req, res) => {
     res.json(post);
 });
 
-router.post('/create', async (req, res) => {
-    console.log('crearpost',req.body);
-    const post = await create(req.body);
+router.post('/create', upload.single('photoPost'), async (req, res) => {
+    const extension = '.' + req.file.mimetype.split('/')[1];
+    const newName = req.file.filename + extension;
+    const path = req.file.path + extension;
+    fs.renameSync(req.file.path, path)
+    
+    req.body.photoPost = 'http://localhost:3000/images/'+ newName;
+    
+    const post = await create(req.body,req.user.id);
     res.json(post);
 });
 router.get('/:id', async (req, res) => {

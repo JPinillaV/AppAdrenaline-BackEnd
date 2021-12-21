@@ -26,7 +26,7 @@ router.post('/login', async (req, res) => {
     console.log(req.body);
     const usuario = await getByEmail(req.body.email);
     if (!usuario) {
-        return res.json({ error: 'Error email y/o password 1' });
+        return res.json({error:'________________Error Email y/o Password 1____________' });
     }
     // 2 - Compruebo si coinciden las password
    

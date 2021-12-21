@@ -5,9 +5,9 @@ const getAll = () => {
 }
 
 
-const create = ({ date, idTypePost, photoPost, usuario_id }) => {
+const create = ({  photoPost  },usuario_id) => {
     
-    return executeQuery('INSERT INTO post (date, idTypePost, photoPost, usuario_id) VALUES (?, ?, ?, ?)', [date, idTypePost, photoPost,usuario_id]);
+    return executeQuery('INSERT INTO post ( photoPost, usuario_id) VALUES (  ?, ?)', [ photoPost,usuario_id]);
 }
 const getById = (postId) => {
     return executeQuery('SELECT * FROM post WHERE id = ?', [postId]);
